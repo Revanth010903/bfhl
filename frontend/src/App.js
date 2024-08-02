@@ -21,7 +21,7 @@ function App() {
         throw new Error('Invalid JSON format. "data" should be an array.');
       }
       console.log('Parsed Data:', parsedData); // Log parsed data
-      const response = await axios.post('http://localhost:3005/bfhl', parsedData);
+      const response = await axios.post('https://bfhl-io3z.onrender.com/bfhl', parsedData);
       console.log('API Response:', response.data); // Log API response
       setResponseData(response.data);
     } catch (error) {
